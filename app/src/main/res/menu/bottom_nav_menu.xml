@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/firstScreen"
-        android:icon="@drawable/ic_baseline_content_paste_24"
-        android:title="@string/first_screen_title" />
+        android:id="@+id/achievementsScreen"
+        android:icon="@drawable/ic_baseline_sports_soccer_24"
+        android:title="@string/achievements_screen_title" />
 
     <item
         android:id="@+id/playersScreen"

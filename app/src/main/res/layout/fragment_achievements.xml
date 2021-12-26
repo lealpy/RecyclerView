@@ -7,28 +7,29 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/tittle"
+        android:id="@+id/achievementsTittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="dsfasdfadsf"
+        android:text="@string/achievements"
         android:textColor="@color/black"
-        android:textSize="@dimen/dimen_16_sp"
+        android:textSize="@dimen/dimen_25_sp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/dimen_12_dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/achievementsRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="@dimen/dimen_12_dp"
-        app:layout_constraintTop_toBottomOf="@+id/tittle"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/achievementsTittle"
         tools:itemCount="5"
-        tools:listitem="@layout/help_item" />
+        tools:listitem="@layout/item_team" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
