@@ -57,8 +57,8 @@ class PlayersViewModel(application: Application) : AndroidViewModel(application)
         if(idList.isNotEmpty()) {
             id = idList[idList.lastIndex] + 1
             while (idList.contains(id)) id++
-            idList.add(id)
         }
+        idList.add(id)
         return id
     }
 

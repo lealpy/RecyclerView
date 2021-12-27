@@ -51,8 +51,8 @@ class AchievementsViewModel(application: Application) : AndroidViewModel(applica
         if(idList.isNotEmpty()) {
             id = idList[idList.lastIndex] + 1
             while (idList.contains(id)) id++
-            idList.add(id)
         }
+        idList.add(id)
         return id
     }
 
@@ -66,7 +66,6 @@ class AchievementsViewModel(application: Application) : AndroidViewModel(applica
         achievementsList.remove(trophyItem)
 
         _achievements.value = achievementsList
-
     }
 
 }

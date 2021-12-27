@@ -1,4 +1,4 @@
-package com.lealpy.simbirsoft_training.ui.help
+package com.lealpy.socialnetworkui.players
 
 import android.graphics.Rect
 import android.view.View
@@ -8,8 +8,7 @@ import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 class PlayerItemDecoration(
     private val spanCount: Int,
     private val spacing: Int,
-) :
-    ItemDecoration() {
+) : ItemDecoration() {
 
     override fun getItemOffsets(
         outRect: Rect,

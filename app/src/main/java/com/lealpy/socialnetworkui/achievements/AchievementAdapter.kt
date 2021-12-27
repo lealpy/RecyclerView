@@ -13,10 +13,17 @@ class AchievementAdapter (
     private val onCrossClickListener: OnCrossClickListener,
 ) : ListAdapter<Achievement, RecyclerView.ViewHolder>(DiffCallback()) {
 
+    inner class SeasonItemHolder(
+        private val binding: ItemSeasonBinding
+    ): RecyclerView.ViewHolder(binding.root) {
+        fun bind(seasonItem: Achievement.SeasonItem) {
+            binding.seasonName.text = seasonItem.name
+        }
+    }
+
     inner class TeamItemHolder(
         private val binding: ItemTeamBinding
     ): RecyclerView.ViewHolder(binding.root) {
-
         fun bind(teamItem: Achievement.TeamItem) {
             binding.teamName.text = teamItem.name
             binding.teamImage.setImageResource(teamItem.image)
@@ -26,7 +33,6 @@ class AchievementAdapter (
     inner class TrophyItemHolder(
         private val binding: ItemTrophyBinding
     ): RecyclerView.ViewHolder(binding.root) {
-
         fun bind(trophyItem: Achievement.TrophyItem) {
             binding.trophyName.text = trophyItem.name
             binding.trophyImage.setImageResource(trophyItem.image)
@@ -34,15 +40,6 @@ class AchievementAdapter (
                 val item = getItem(adapterPosition) as Achievement.TrophyItem
                 onCrossClickListener.onCrossClick(item)
             }
-        }
-    }
-
-    inner class SeasonItemHolder(
-        private val binding: ItemSeasonBinding
-    ): RecyclerView.ViewHolder(binding.root) {
-
-        fun bind(seasonItem: Achievement.SeasonItem) {
-            binding.seasonName.text = seasonItem.name
         }
     }
 

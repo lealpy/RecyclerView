@@ -9,11 +9,13 @@
     <fragment
         android:id="@+id/achievementsScreen"
         android:name="com.lealpy.socialnetworkui.achievements.AchievementsFragment"
-        android:label="FirstFragment" />
+        android:label="FirstFragment"
+        tools:layout="@layout/fragment_achievements" />
 
     <fragment
         android:id="@+id/playersScreen"
         android:name="com.lealpy.socialnetworkui.players.PlayersFragment"
-        android:label="PlayersFragment" />
+        android:label="PlayersFragment"
+        tools:layout="@layout/fragment_players" />
 
 </navigation>

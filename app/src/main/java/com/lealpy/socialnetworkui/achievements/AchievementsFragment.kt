@@ -27,16 +27,12 @@ class AchievementsFragment : Fragment(R.layout.fragment_achievements) {
     }
 
     private fun initObservers() {
-
         viewModel.achievements.observe(viewLifecycleOwner) { achievements ->
             adapter.submitList(achievements)
         }
-
     }
 
     private fun initViews() {
-
         binding.achievementsRecyclerView.adapter = adapter
-
     }
 }
